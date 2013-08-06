@@ -16,7 +16,7 @@
                         <p>Login:</p>
                     </td>
                     <td>
-                        <input type="text" name="username"></input>                      
+                        <input type="text" name="username" id="username"></input>                      
                     </td>
                 </tr>
                 <tr>
@@ -24,11 +24,18 @@
                         <p>Password:</p>
                     </td>
                     <td>
-                        <input type="password" name="password"></input>
+                        <input type="password" name="password" id="password"></input>
                     </td>
-                </tr>              
-            </table>
-            <button type="submit">Login</button>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" id="submit">Login</button>
+                    </td>
+                    <td>
+                        <button type="button" id="register" onclick="location.href='register.php';">Register</button>
+                    </td>
+                </tr>  
+            </table>     
         </form>
         <?php
         
