@@ -1,0 +1,21 @@
+/*Worked to achieve a 'medieval theme, as I assume this game has*/
+
+body {
+	
+	background-image: url(http://line25.com/wp-content/uploads/2009/letterpress/demo/bg.png);
+	text-align:center;
+}
+
+#content {
+	
+	border:5px double #ffffff;
+	background-color: rgba(255,255,255,0.58);
+	border-radius:3px;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top:10%;
+	font-family:fantasy;
+	padding-bottom:5px;
+	
+	
+}
