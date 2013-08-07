@@ -4,10 +4,10 @@
  * File that works as a function library.
  */
 
-function validateEmail($email) {
+function validateEmail($em) {
     $v = "/[a-zA-Z0-9_-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/";
 
-    return (bool) preg_match($v, $email);
+    return (bool) preg_match($v, $em);
 }
 
 function connectToDatabase() {

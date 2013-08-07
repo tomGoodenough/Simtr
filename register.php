@@ -44,25 +44,34 @@
 include('includes/functions.php');
 
 $registration = [
-    username => false,
-    password => false,
-    email => false
+    'username' => false,
+    'password' => false,
+    'email' => false
 ];
 
-$username = $_POST['username'];
-$password1 = $_POST['password1'];
-$password2 = $_POST['password2'];
-$email = $_POST['email'];
+if (isset($_POST['username']))
+    $username = $_POST['username'];
+if (isset($_POST['password1']))
+    $password1 = $_POST['password1'];
+if (isset($_POST['password2']))
+    $password2 = $_POST['password2'];
+if (isset($_POST['email']))
+    $email = $_POST['email'];
+
+$username = '';
+$password1 = '';
+$password2 = '';
+$email = '';
 
 $username = stripslashes($username);
 $password1 = stripslashes($password1);
 $password2 = stripslashes($password2);
 $email = stripslashes($email);
 
-$username = mysqli_real_escape_string($username);
-$password1 = mysqli_real_escape_string($password1);
-$password2 = mysqli_real_escape_string($password2);
-$email = mysqli_real_escape_string($email);
+$username = mysql_real_escape_string($username);
+$password1 = mysql_real_escape_string($password1);
+$password2 = mysql_real_escape_string($password2);
+$email = mysql_real_escape_string($email);
 
 if (!$username || $password1 || $password2 || $email) {
     echo 'You have to fill all forms.';
